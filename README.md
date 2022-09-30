@@ -48,3 +48,47 @@ return (
     <h2>Now this works! </h2>
   </React.Fragment>
 );
+
+# React portals
+
+Another issue in react isa semantic problem of making modals thar overlay in an application, for example
+
+return (
+<>
+  <MyModal />
+  <MyInputForm />
+</>
+);
+
+this will render
+
+<section>
+ <h2> Content from another component</h2>
+ <div class="my-modal">
+   <h2> Modal title</h2>
+ </div>
+ <Form>
+   <> more content
+ </Form>
+</section>
+
+so, the modal is a SEMANTIC ERROR because it overlays the application, is like trying to create a button starting from a div, like this
+
+<div onClick={clickHandler}>Click me, i am a bad button </div>
+
+does not mean that because this works, it is a good practice
+
+# PORTALS CHANGE THE LOCATION OF THE MODAL LOCATION IN THE DOM
+
+<div class="my-modal">
+  <h2> Modal title</h2>
+</div>
+
+<section>
+ <h2> Content from another component</h2>
+ <Form>
+   <> more content
+ </Form>
+</section>
+
+Something like this
