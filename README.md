@@ -37,3 +37,14 @@ many div are created so many unnecessary divs add no semantic meaning or structu
       <div>
 
 many elements and its a bad idea if you have a 1000 elements 
+
+# React fragments
+
+this problem is solved using fragments: We wrap the elements we created on the component with a built in class named React.fragment
+
+return (
+  <React.Fragment>
+    <h2>Hi there! </h2>
+    <h2>Now this works! </h2>
+  </React.Fragment>
+);
