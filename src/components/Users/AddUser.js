@@ -61,6 +61,8 @@ const AddUser = (props) => {
             id="age"
             type="number"
             ref={ageInputRef}
+            // using ref here change the component from controlled to uncontrolled
+            // there is no state management
           />
           <Button type="submit">Add User</Button>
         </form>
